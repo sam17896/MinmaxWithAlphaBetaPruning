@@ -64,7 +64,9 @@ public class MinmaxWithAlpaBetaPruning {
         node3.childs.add(node12);
         
         AlphaBeta player = new AlphaBeta();
-        node.value = player.minimax(node, 2, true);
+        double alpha = Double.NEGATIVE_INFINITY;
+        double beta = Double.POSITIVE_INFINITY;
+        node.value = player.minimax(node, 2, true,alpha,beta);
         
         System.out.println(t.root.value);
         System.out.println(player.counter);
